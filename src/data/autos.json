@@ -1,0 +1,22 @@
+[
+  { "id": 1, "marca": "Toyota", "modelo": "Corolla", "anio": 2020, "precio": 21000, "color": "Blanco" },
+  { "id": 2, "marca": "Ford", "modelo": "Focus", "anio": 2019, "precio": 19500, "color": "Negro" },
+  { "id": 3, "marca": "Chevrolet", "modelo": "Cruze", "anio": 2021, "precio": 22500, "color": "Rojo" },
+  { "id": 4, "marca": "Volkswagen", "modelo": "Golf", "anio": 2020, "precio": 23000, "color": "Azul" },
+  { "id": 5, "marca": "Honda", "modelo": "Civic", "anio": 2018, "precio": 18500, "color": "Gris" },
+  { "id": 6, "marca": "Hyundai", "modelo": "Elantra", "anio": 2022, "precio": 24000, "color": "Blanco" },
+  { "id": 7, "marca": "Nissan", "modelo": "Sentra", "anio": 2020, "precio": 20000, "color": "Negro" },
+  { "id": 8, "marca": "Mazda", "modelo": "3", "anio": 2019, "precio": 21500, "color": "Rojo" },
+  { "id": 9, "marca": "Kia", "modelo": "Forte", "anio": 2021, "precio": 21000, "color": "Azul" },
+  { "id": 10, "marca": "Peugeot", "modelo": "208", "anio": 2022, "precio": 19500, "color": "Gris" },
+  { "id": 11, "marca": "Renault", "modelo": "Clio", "anio": 2018, "precio": 17000, "color": "Negro" },
+  { "id": 12, "marca": "Fiat", "modelo": "Argo", "anio": 2021, "precio": 18500, "color": "Blanco" },
+  { "id": 13, "marca": "Citroën", "modelo": "C3", "anio": 2019, "precio": 18000, "color": "Rojo" },
+  { "id": 14, "marca": "Chevrolet", "modelo": "Onix", "anio": 2020, "precio": 19000, "color": "Gris" },
+  { "id": 15, "marca": "Ford", "modelo": "Fiesta", "anio": 2017, "precio": 16000, "color": "Azul" },
+  { "id": 16, "marca": "Volkswagen", "modelo": "Polo", "anio": 2021, "precio": 20500, "color": "Negro" },
+  { "id": 17, "marca": "Toyota", "modelo": "Yaris", "anio": 2019, "precio": 20000, "color": "Blanco" },
+  { "id": 18, "marca": "Honda", "modelo": "Fit", "anio": 2018, "precio": 17500, "color": "Gris" },
+  { "id": 19, "marca": "Hyundai", "modelo": "Accent", "anio": 2020, "precio": 19500, "color": "Rojo" },
+  { "id": 20, "marca": "Nissan", "modelo": "Versa", "anio": 2022, "precio": 21500, "color": "Azul" }
+]
