@@ -1,5 +1,4 @@
-import { useState } from "react";
-import autosData from "../data/autos.json";
+import { useState, useEffect } from "react";
 import { useAutoContext } from "../context/AutoContext";
 import AutoCard from "./AutoCard";
 import '../App.css'; 
@@ -7,23 +6,29 @@ import '../App.css';
 const AutoList = () => {
   const [colorFiltro, setColorFiltro] = useState<string>("Todos");
   const [autoSeleccionado, setAutoSeleccionado] = useState<number | null>(null);
+  const [autos, setAutos] = useState<any[]>([]);
   const { favoritos, agregarFavorito } = useAutoContext();
+
+  useEffect(() => {
+    import("../data/autos.json").then((mod) => {
+      setAutos(mod.default);
+    });
+  }, []);
 
   const coloresUnicos = [
     "Todos",
-    ...Array.from(new Set(autosData.map((auto) => auto.color))),
+    ...Array.from(new Set(autos.map((auto) => auto.color))),
   ];
 
   const autosFiltrados =
     colorFiltro === "Todos"
-      ? autosData
-      : autosData.filter((auto) => auto.color === colorFiltro);
+      ? autos
+      : autos.filter((auto) => auto.color === colorFiltro);
 
   const esFavorito = (id: number) => favoritos.some((a) => a.id === id);
 
-  // Si hay un auto seleccionado, mostrar el AutoCard
   if (autoSeleccionado !== null) {
-    const auto = autosData.find((a) => a.id === autoSeleccionado);
+    const auto = autos.find((a) => a.id === autoSeleccionado);
     if (!auto) return null;
     return (
       <div className="auto-list">
@@ -68,9 +73,11 @@ const AutoList = () => {
           {autosFiltrados.map((auto) => (
             <tr
               key={auto.id}
-              style={auto.anio < 2020 ? { backgroundColor: "yellow" } : {}}
+              style={{
+                cursor: "pointer",
+                backgroundColor: auto.anio < 2020 ? "yellow" : undefined,
+              }}
               onClick={() => setAutoSeleccionado(auto.id)}
-             
             >
               <td>{auto.marca}</td>
               <td>{auto.modelo}</td>

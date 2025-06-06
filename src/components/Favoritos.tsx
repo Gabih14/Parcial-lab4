@@ -1,4 +1,5 @@
 import { useAutoContext } from "../context/AutoContext";
+import '../App.css'; 
 
 const Favoritos = () => {
   const { favoritos, quitarFavorito } = useAutoContext();
@@ -8,7 +9,7 @@ const Favoritos = () => {
   }
 
   return (
-    <>
+    <div className="favoritos">
       <h2>Autos Favoritos</h2>
       <table>
         <thead>
@@ -38,7 +39,7 @@ const Favoritos = () => {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 

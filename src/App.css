@@ -11,3 +11,8 @@
   flex-direction: column;
 
 }
+
+.favoritos{
+  display: flex;
+  flex-direction: column;
+}
